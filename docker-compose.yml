@@ -1,0 +1,13 @@
+version: '3.8' # Define a versão do Docker Compose a ser utilizada. '3.8' é uma versão estável e recomendada.
+
+# Define os serviços (contêineres) que compõem a aplicação.
+services:
+  api: # Nome do serviço, agora alinhado com o nome do contêiner para maior clareza.
+    container_name: api # Define um nome fixo para o contêiner, facilitando a sua identificação.
+    build: . # Constrói a imagem Docker a partir do Dockerfile localizado no diretório atual (.).
+    ports: # Mapeia as portas entre o seu computador (host) e o contêiner.
+      - "8000:8000" # Direciona a porta 8000 do host para a porta 8000 do contêiner.
+    volumes: # Define os volumes para sincronizar arquivos entre o host e o contêiner.
+      # Monta o diretório atual (.) do seu computador para o diretório /app dentro do contêiner.
+      # Isso permite que as alterações no código sejam refletidas instantaneamente (hot-reloading).
+      - .:/app

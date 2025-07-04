@@ -1,0 +1,6 @@
+venv
+__pycache__
+
+# Ignorar o banco de dados SQLite, pois será gerenciado por um volume.
+escola.db
+*.db
