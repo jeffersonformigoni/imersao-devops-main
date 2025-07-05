@@ -1,5 +1,3 @@
-version: '3.8' # Define a versão do Docker Compose a ser utilizada. '3.8' é uma versão estável e recomendada.
-
 # Define os serviços (contêineres) que compõem a aplicação.
 services:
   api: # Nome do serviço, agora alinhado com o nome do contêiner para maior clareza.
